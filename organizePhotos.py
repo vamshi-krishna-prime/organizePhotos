@@ -25,5 +25,5 @@ def organize_photos(directory):
         place_name = extract_place(filename)
         os.rename(filename, os.path.join(place_name, filename))
 
-
+        
 organize_photos("Photos")
