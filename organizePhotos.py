@@ -12,9 +12,17 @@ path = "Photos"
 os.rename(filename, os.path.join(path, filename))
 
 def extract_place(filename):
-    return filename.split("_")[1]
-    
-# some calls you can test it with:
-print(extract_place("2016-11-04_Berlin_09/42/22.jpg"))
-print(extract_place("2018-01-03_Oahu_21/51/57.jpg"))
-print(extract_place("2018-01_Scottland_11/51/27.jpg"))
+    return filename.split('_')[1]
+
+originals = ['2018-01-03_Scotland_21:51:57.jpg',
+             '2016-09-04_Berlin_08:25:50.jpg',
+             '2018-08-01_Oahu_21:51:37.jpg']
+
+print(originals)
+
+places = []
+for filename in originals:
+    place = extract_place(filename)
+    places.append(place)
+
+print(places)
